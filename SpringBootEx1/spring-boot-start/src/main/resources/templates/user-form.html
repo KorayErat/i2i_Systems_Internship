@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kullanıcı Ekle</title>
+</head>
+<body>
+<h2>Kullanıcı Ekle</h2>
+<form th:action="@{/add-user}" th:object="${user}" method="post">
+    <label>İsim:</label>
+    <input type="text" th:field="*{name}" /><br><br>
+
+    <label>Email:</label>
+    <input type="email" th:field="*{email}" /><br><br>
+
+    <button type="submit">Kaydet</button>
+</form>
+</body>
+</html>
